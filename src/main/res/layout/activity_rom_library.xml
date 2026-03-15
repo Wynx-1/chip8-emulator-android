@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#0D1117">
+
+    <!-- Header -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="48dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingBottom="12dp"
+        android:gravity="center_vertical"
+        android:background="#0D1117">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="ROM Library"
+            android:textColor="#00FF41"
+            android:textSize="22sp"
+            android:textStyle="bold"/>
+
+        <Button
+            android:id="@+id/btnAddRom"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:text="+ ADD ROM"
+            android:textSize="12sp"
+            android:backgroundTint="#161B22"
+            android:textColor="#00FF41"
+            android:textStyle="bold"/>
+    </LinearLayout>
+
+    <!-- Divider -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#1E2530"/>
+
+    <!-- ROM count -->
+    <TextView
+        android:id="@+id/tvRomCount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textColor="#555555"
+        android:textSize="12sp"
+        android:paddingLeft="16dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="4dp"/>
+
+    <!-- ROM list -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/romRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:paddingTop="4dp"
+        android:paddingBottom="8dp"
+        android:clipToPadding="false"/>
+
+    <!-- Empty state -->
+    <TextView
+        android:id="@+id/tvEmptyLibrary"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:text="No ROMs yet&#10;&#10;Tap + ADD ROM to load your first game"
+        android:textColor="#555555"
+        android:textSize="15sp"
+        android:gravity="center"
+        android:visibility="gone"/>
+
+    <!-- Back button -->
+    <Button
+        android:id="@+id/btnBackLibrary"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_margin="12dp"
+        android:text="BACK"
+        android:textSize="12sp"
+        android:backgroundTint="#161B22"
+        android:textColor="#555555"/>
+
+</LinearLayout>

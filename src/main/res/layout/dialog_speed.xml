@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="#161B22">
+
+    <TextView
+        android:id="@+id/tvSpeedLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Speed: 10 cycles/frame"
+        android:textColor="#00FF41"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_marginBottom="16dp"/>
+
+    <SeekBar
+        android:id="@+id/speedSeekBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max="39"
+        android:progress="9"
+        android:progressTint="#00FF41"
+        android:thumbTint="#00FF41"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="8dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Slow (1x)"
+            android:textColor="#888888"
+            android:textSize="12sp"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Fast (40x)"
+            android:textColor="#888888"
+            android:textSize="12sp"
+            android:gravity="end"/>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Most ROMs work best at 10-15x"
+        android:textColor="#555555"
+        android:textSize="11sp"
+        android:gravity="center"
+        android:layout_marginTop="12dp"/>
+
+</LinearLayout>

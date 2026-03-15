@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:background="#0D1117"
+    android:padding="4dp">
+
+    <!-- LEFT: Screen + control buttons -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1.6"
+        android:orientation="vertical">
+
+        <!-- CHIP-8 Screen — takes all remaining height -->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <com.example.chip8emulator.Chip8SurfaceView
+                android:id="@+id/chip8Screen"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#000000"/>
+
+            <com.example.chip8emulator.DebugOverlayView
+                android:id="@+id/debugOverlay"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="visible"/>
+
+        </FrameLayout>
+
+        <!-- Control buttons ROW 1 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:orientation="horizontal"
+            android:layout_marginTop="3dp">
+
+            <Button android:id="@+id/btnLoadRom"
+                android:layout_width="0dp" android:layout_height="match_parent"
+                android:layout_weight="1" android:layout_margin="2dp"
+                android:text="LOAD" android:textSize="10sp"
+                android:backgroundTint="#161B22" android:textColor="#00FF41"
+                android:textStyle="bold"/>
+            <Button android:id="@+id/btnStart"
+                android:layout_width="0dp" android:layout_height="match_parent"
+                android:layout_weight="1" android:layout_margin="2dp"
+                android:text="START" android:textSize="10sp"
+                android:backgroundTint="#161B22" android:textColor="#00FF41"
+                android:textStyle="bold"/>
+            <Button android:id="@+id/btnPause"
+                android:layout_width="0dp" android:layout_height="match_parent"
+                android:layout_weight="1" android:layout_margin="2dp"
+                android:text="PAUSE" android:textSize="10sp"
+                android:backgroundTint="#161B22" android:textColor="#00FF41"
+                android:textStyle="bold"/>
+        </LinearLayout>
+
+        <!-- Control buttons ROW 2 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:orientation="horizontal"
+            android:layout_marginTop="2dp">
+
+            <Button android:id="@+id/btnStep"
+                android:layout_width="0dp" android:layout_height="match_parent"
+                android:layout_weight="1" android:layout_margin="2dp"
+                android:text="STEP" android:textSize="10sp"
+                android:backgroundTint="#161B22" android:textColor="#FFB000"
+                android:textStyle="bold"/>
+            <Button android:id="@+id/btnReset"
+                android:layout_width="0dp" android:layout_height="match_parent"
+                android:layout_weight="1" android:layout_margin="2dp"
+                android:text="RESET" android:textSize="10sp"
+                android:backgroundTint="#161B22" android:textColor="#00FF41"
+                android:textStyle="bold"/>
+            <Button android:id="@+id/btnBenchmark"
+                android:layout_width="0dp" android:layout_height="match_parent"
+                android:layout_weight="1" android:layout_margin="2dp"
+                android:text="BENCH" android:textSize="10sp"
+                android:backgroundTint="#161B22" android:textColor="#FFB000"
+                android:textStyle="bold"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- RIGHT: Keypad 4x4 -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:layout_marginStart="4dp">
+
+        <!-- Keypad Row 1: 1 2 3 C -->
+        <LinearLayout android:layout_width="match_parent" android:layout_height="0dp"
+            android:layout_weight="1" android:orientation="horizontal">
+            <Button android:id="@+id/keyBtn1" android:layout_width="0dp"
+                android:layout_height="match_parent" android:layout_weight="1"
+                android:layout_margin="2dp" android:text="1" android:textSize="12sp"
+                android:backgroundTint="#161B22" android:textColor="#00FF41"
+                android:textStyle="bold"/>
+            <Button android:id="@+id/keyBtn2" android:layout_width="0dp"
+                android:layout_height="match_parent" android:layout_weight="1"
+                android:layout_margin="2dp" android:text="2" android:textSize="12sp"
+                android:backgroundTint="#161B22" android:textColor="#00FF41"
+                android:textStyle="bold"/>
+            <Button android:id="@+id/keyBtn3" android:layout_width="0dp"
+                android:layout_height="match_parent" android:layout_weight="1"
+                android:layout_margin="2dp" android:text="3" android:textSize="12sp"
+                android:backgroundTint="#161B22" android:textColor="#00FF41"
+                android:textStyle="bold"/>
+            <Button android:id="@+id/keyBtnC" android:layout_width="0dp"
+                android:layout_height="match_parent" android:layout_weight="1"
+                android:layout_margin="2dp" android:text="C" android:textSize="12sp"
+                android:backgroundTint="#161B22" android:textColor="#00FF41"
+                android:textStyle="bold"/>
+        </LinearLayout>
+
+        <!-- Keypad Row 2: 4 5 6 D -->
+        <LinearLayout android:layout_width="match_parent" android:layout_height="0dp"
+            android:layout_weight="1" android:orientation="horizontal">
+            <Button android:id="@+id/keyBtn4" android:layout_width="0dp"
+                android:layout_height="match_parent" android:layout_weight="1"
+                android:layout_margin="2dp" android:text="4" android:textSize="12sp"
+                android:backgroundTint="#161B22" android:textColor="#00FF41"
+                android:textStyle="bold"/>
+            <Button android:id="@+id/keyBtn5" android:layout_width="0dp"
+                android:layout_height="match_parent" android:layout_weight="1"
+                android:layout_margin="2dp" android:text="5" android:textSize="12sp"
+                android:backgroundTint="#161B22" android:textColor="#00FF41"
+                android:textStyle="bold"/>
+            <Button android:id="@+id/keyBtn6" android:layout_width="0dp"
+                android:layout_height="match_parent" android:layout_weight="1"
+                android:layout_margin="2dp" android:text="6" android:textSize="12sp"
+                android:backgroundTint="#161B22" android:textColor="#00FF41"
+                android:textStyle="bold"/>
+            <Button android:id="@+id/keyBtnD" android:layout_width="0dp"
+                android:layout_height="match_parent" android:layout_weight="1"
+                android:layout_margin="2dp" android:text="D" android:textSize="12sp"
+                android:backgroundTint="#161B22" android:textColor="#00FF41"
+                android:textStyle="bold"/>
+        </LinearLayout>
+
+        <!-- Keypad Row 3: 7 8 9 E -->
+        <LinearLayout android:layout_width="match_parent" android:layout_height="0dp"
+            android:layout_weight="1" android:orientation="horizontal">
+            <Button android:id="@+id/keyBtn7" android:layout_width="0dp"
+                android:layout_height="match_parent" android:layout_weight="1"
+                android:layout_margin="2dp" android:text="7" android:textSize="12sp"
+                android:backgroundTint="#161B22" android:textColor="#00FF41"
+                android:textStyle="bold"/>
+            <Button android:id="@+id/keyBtn8" android:layout_width="0dp"
+                android:layout_height="match_parent" android:layout_weight="1"
+                android:layout_margin="2dp" android:text="8" android:textSize="12sp"
+                android:backgroundTint="#161B22" android:textColor="#00FF41"
+                android:textStyle="bold"/>
+            <Button android:id="@+id/keyBtn9" android:layout_width="0dp"
+                android:layout_height="match_parent" android:layout_weight="1"
+                android:layout_margin="2dp" android:text="9" android:textSize="12sp"
+                android:backgroundTint="#161B22" android:textColor="#00FF41"
+                android:textStyle="bold"/>
+            <Button android:id="@+id/keyBtnE" android:layout_width="0dp"
+                android:layout_height="match_parent" android:layout_weight="1"
+                android:layout_margin="2dp" android:text="E" android:textSize="12sp"
+                android:backgroundTint="#161B22" android:textColor="#00FF41"
+                android:textStyle="bold"/>
+        </LinearLayout>
+
+        <!-- Keypad Row 4: A 0 B F -->
+        <LinearLayout android:layout_width="match_parent" android:layout_height="0dp"
+            android:layout_weight="1" android:orientation="horizontal">
+            <Button android:id="@+id/keyBtnA" android:layout_width="0dp"
+                android:layout_height="match_parent" android:layout_weight="1"
+                android:layout_margin="2dp" android:text="A" android:textSize="12sp"
+                android:backgroundTint="#161B22" android:textColor="#00FF41"
+                android:textStyle="bold"/>
+            <Button android:id="@+id/keyBtn0" android:layout_width="0dp"
+                android:layout_height="match_parent" android:layout_weight="1"
+                android:layout_margin="2dp" android:text="0" android:textSize="12sp"
+                android:backgroundTint="#161B22" android:textColor="#00FF41"
+                android:textStyle="bold"/>
+            <Button android:id="@+id/keyBtnB" android:layout_width="0dp"
+                android:layout_height="match_parent" android:layout_weight="1"
+                android:layout_margin="2dp" android:text="B" android:textSize="12sp"
+                android:backgroundTint="#161B22" android:textColor="#00FF41"
+                android:textStyle="bold"/>
+            <Button android:id="@+id/keyBtnF" android:layout_width="0dp"
+                android:layout_height="match_parent" android:layout_weight="1"
+                android:layout_margin="2dp" android:text="F" android:textSize="12sp"
+                android:backgroundTint="#161B22" android:textColor="#00FF41"
+                android:textStyle="bold"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
