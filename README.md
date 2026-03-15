@@ -4,6 +4,16 @@ A fully featured CHIP-8 / SCHIP / XO-CHIP emulator for Android,
 built in Kotlin. One of the most feature-rich CHIP-8 emulators
 available on Android.
 
+## Screenshots
+
+![Main Screen](Screenshot_20260315-165659.png)
+![Screen 2](Screenshot_20260315-165714.png)
+![Screen 3](Screenshot_20260315-165749.png)
+![Screen 4](Screenshot_20260315-165755.png)
+![Screen 5](Screenshot_20260315-165805.png)
+![Screen 6](Screenshot_20260315-165948.png)
+![Screen 7](Screenshot_20260315-170008.png)
+
 ## Features
 
 ### Emulation
