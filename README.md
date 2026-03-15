@@ -84,3 +84,9 @@ Free public domain CHIP-8 ROMs:
 ## License
 
 MIT License — free to use, modify, and distribute.
+
+
+## Join Our Community
+
+Have questions, suggestions, or want to chat with me?  
+Join My Discord server: [Click Here](https://discord.gg/5GxWv9hX2a)
